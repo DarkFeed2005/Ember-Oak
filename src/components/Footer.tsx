@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import type { Category } from "../data/products";
 import Reveal from "./Reveal";
 import { ArrowRightIcon, BeanIcon, CheckIcon, PinIcon } from "./Icons";
@@ -26,14 +26,14 @@ export default function Footer({ onCategory }: Props) {
       {/* subscribe band */}
       <div className="relative border-b border-roast-700">
         <div className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-ember-600/12 blur-[90px]" />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-5 py-14 md:px-8 lg:grid-cols-2 lg:py-16">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-8 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-16">
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-ember-300">The Sunday Grind</p>
             <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-cream-100 md:text-5xl">
               Never run <span className="font-light italic text-ember-400">dry.</span>
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-cream-400">
-              Brew guides, roast logs, and first dibs on micro-lots â€” one email every
+              Brew guides, roast logs, and first dibs on micro-lots — one email every
               Sunday, while the drum is still warm.
             </p>
           </Reveal>
@@ -79,7 +79,7 @@ export default function Footer({ onCategory }: Props) {
       </div>
 
       {/* main footer */}
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-14 md:px-8 lg:grid-cols-12">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:px-8">
         <div className="lg:col-span-5">
           <a href="#top" className="flex items-center gap-2.5">
             <span className="grid h-9 w-9 place-items-center rounded-full border border-ember-500/50 bg-roast-800 text-ember-400">
@@ -98,7 +98,7 @@ export default function Footer({ onCategory }: Props) {
             <span>
               410 NW Flanders St, Colombo, SL
               <br />
-              <span className="text-cream-500">CafÃ© open Tueâ€“Sun Â· 7 am â€“ 4 pm</span>
+              <span className="text-cream-500">Café open Tue–Sun · 7 am – 4 pm</span>
             </span>
           </p>
         </div>
@@ -147,8 +147,8 @@ export default function Footer({ onCategory }: Props) {
       </div>
 
       <div className="border-t border-roast-700">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-cream-500 md:flex-row md:px-8">
-          <p>Â© 2026 Ember &amp; Oak Roasters. Roasted with fire in Sri Lanka.</p>
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-cream-500 sm:px-6 md:flex-row lg:px-8">
+          <p>© 2026 Ember &amp; Oak Roasters. Roasted with fire in Sri Lanka.</p>
           <p className="flex items-center gap-2">
              <BeanIcon className="h-3.5 w-3.5 text-ember-500" /> Made By KpolitX Team
           </p>

@@ -1,4 +1,4 @@
-﻿import Reveal from "./Reveal";
+import Reveal from "./Reveal";
 import { useStore } from "../lib/store";
 import { ArrowRightIcon, DropIcon, FlameIcon, LeafIcon, TruckIcon } from "./Icons";
 
@@ -7,7 +7,7 @@ const STEPS = [
     n: "01",
     icon: LeafIcon,
     title: "Sourced at origin",
-    body: "We buy full lots â€” never samples â€” from fourteen farms we visit every harvest, paying two to three times the commodity price and publishing what we paid.",
+    body: "We buy full lots — never samples — from fourteen farms we visit every harvest, paying two to three times the commodity price and publishing what we paid.",
   },
   {
     n: "02",
@@ -19,7 +19,7 @@ const STEPS = [
     n: "03",
     icon: DropIcon,
     title: "Rested & cupped",
-    body: "Every batch rests 24 hours, then gets cupped blind against the last one. Anything scoring under 86 never leaves the building â€” it becomes staff coffee.",
+    body: "Every batch rests 24 hours, then gets cupped blind against the last one. Anything scoring under 86 never leaves the building — it becomes staff coffee.",
   },
   {
     n: "04",
@@ -33,9 +33,9 @@ export default function Craft() {
   const { toast } = useStore();
 
   return (
-    <section id="craft" className="relative scroll-mt-20 bg-cream-200 py-20 text-roast-950 md:py-28">
+<section id="craft" className="relative scroll-mt-20 overflow-x-clip bg-cream-200 py-20 text-roast-950 md:py-28">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-roast-950/20 to-transparent" />
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-5 md:px-8 lg:grid-cols-12">
+      <div className="relative mx-auto grid max-w-7xl gap-14 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
         {/* sticky intro */}
         <div className="lg:col-span-5">
           <div className="lg:sticky lg:top-28">
@@ -49,7 +49,7 @@ export default function Craft() {
             </Reveal>
             <Reveal delay={140}>
               <p className="mt-6 max-w-md text-base leading-relaxed text-roast-950/75">
-                Coffee is a chain of small decisions â€” when to pick, how long to ferment,
+                Coffee is a chain of small decisions — when to pick, how long to ferment,
                 how many seconds of development. We obsess over each link so the only
                 decision left to you is which cup to pour first.
               </p>

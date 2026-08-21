@@ -1,4 +1,4 @@
-﻿export type Category = "single-origin" | "blend" | "decaf";
+export type Category = "single-origin" | "blend" | "decaf";
 export type Weight = 250 | 1000;
 
 export interface Product {
@@ -37,9 +37,9 @@ export const CATEGORIES: { id: Category | "all"; label: string }[] = [
 
 export const ROAST_LABELS: Record<number, string> = {
   1: "Light",
-  2: "Lightâ€“medium",
+  2: "Light–medium",
   3: "Medium",
-  4: "Mediumâ€“dark",
+  4: "Medium–dark",
   5: "Dark",
 };
 
@@ -51,19 +51,19 @@ export const PRODUCTS: Product[] = [
     region: "Oromia",
     country: "Ethiopia",
     category: "single-origin",
-    process: "Washed Â· 72 h ferment",
+    process: "Washed · 72 h ferment",
     varietal: "Heirloom 74110",
     altitude: "2,100 masl",
     roast: 1,
     notes: ["Jasmine", "Bergamot", "White peach"],
     description:
-      "A shimmering heirloom lot from the Hambela valley, fermented 72 hours before washing. It opens like a bouquet â€” jasmine and bergamot up front, then a long, silky finish of ripe white peach.",
+      "A shimmering heirloom lot from the Hambela valley, fermented 72 hours before washing. It opens like a bouquet — jasmine and bergamot up front, then a long, silky finish of ripe white peach.",
     price250: 21,
     score: 92.4,
     badge: "New harvest",
     accent: "#e8b06b",
     image: "/coffee/Guji Highlands.png",
-    recipe: { method: "V60 pour-over", ratio: "1 : 16", grind: "Medium-fine", temp: "94 Â°C", time: "2:45" },
+    recipe: { method: "V60 pour-over", ratio: "1 : 16", grind: "Medium-fine", temp: "94 °C", time: "2:45" },
   },
   {
     id: "mirador",
@@ -78,13 +78,13 @@ export const PRODUCTS: Product[] = [
     roast: 2,
     notes: ["Caramel", "Red apple", "Cacao nib"],
     description:
-      "Third-generation Pink Bourbon from a twelve-hectare family farm above GarzÃ³n. Sweet and structured â€” buttery caramel wrapped around bright red-apple acidity, drying out on a clean cocoa note.",
+      "Third-generation Pink Bourbon from a twelve-hectare family farm above Garzón. Sweet and structured — buttery caramel wrapped around bright red-apple acidity, drying out on a clean cocoa note.",
     price250: 19.5,
     score: 89.8,
     badge: "Staff pick",
     accent: "#c4674a",
     image: "/coffee/El Mirador.png",
-    recipe: { method: "Kalita Wave", ratio: "1 : 15.5", grind: "Medium", temp: "93 Â°C", time: "3:00" },
+    recipe: { method: "Kalita Wave", ratio: "1 : 15.5", grind: "Medium", temp: "93 °C", time: "3:00" },
   },
   {
     id: "nyeri",
@@ -94,18 +94,18 @@ export const PRODUCTS: Product[] = [
     country: "Kenya",
     category: "single-origin",
     process: "Double-washed",
-    varietal: "SL28 Â· SL34",
+    varietal: "SL28 · SL34",
     altitude: "1,800 masl",
     roast: 2,
     notes: ["Blackcurrant", "Ruby grapefruit", "Demerara"],
     description:
-      "Classic highland Kenyan intensity from the slopes of the Aberdares. Double fermentation gives it a wine-dark fruit punch â€” blackcurrant and grapefruit held together by raw demerara sweetness.",
+      "Classic highland Kenyan intensity from the slopes of the Aberdares. Double fermentation gives it a wine-dark fruit punch — blackcurrant and grapefruit held together by raw demerara sweetness.",
     price250: 22.5,
     score: 91.2,
-    badge: "Limited Â· 8 bags",
+    badge: "Limited · 8 bags",
     accent: "#8e4a5b",
     image: "/coffee/Nyeri AA.png",
-    recipe: { method: "V60 pour-over", ratio: "1 : 16.5", grind: "Medium-fine", temp: "95 Â°C", time: "2:30" },
+    recipe: { method: "V60 pour-over", ratio: "1 : 16.5", grind: "Medium-fine", temp: "95 °C", time: "2:30" },
   },
   {
     id: "cerrado",
@@ -114,25 +114,25 @@ export const PRODUCTS: Product[] = [
     region: "Minas Gerais",
     country: "Brazil",
     category: "single-origin",
-    process: "Natural Â· patio dried",
-    varietal: "Yellow CatuaÃ­",
+    process: "Natural · patio dried",
+    varietal: "Yellow Catuaí",
     altitude: "1,150 masl",
     roast: 3,
     notes: ["Toasted hazelnut", "Milk chocolate", "Dried fig"],
     description:
-      "A patio-dried natural from the red soils of the Cerrado. Round, comforting and dangerously drinkable â€” hazelnut and milk chocolate with a whisper of dried fig. Our default recommendation for espresso with milk.",
+      "A patio-dried natural from the red soils of the Cerrado. Round, comforting and dangerously drinkable — hazelnut and milk chocolate with a whisper of dried fig. Our default recommendation for espresso with milk.",
     price250: 18,
     score: 87.5,
     accent: "#c9a35c",
     image: "/coffee/Cerrado Natural.png",
-    recipe: { method: "Espresso", ratio: "1 : 2 in 28 s", grind: "Fine", temp: "93 Â°C", time: "0:28" },
+    recipe: { method: "Espresso", ratio: "1 : 2 in 28 s", grind: "Fine", temp: "93 °C", time: "0:28" },
   },
   {
     id: "night-owl",
     name: "Night Owl Espresso",
-    producer: "House blend Â· seasonal",
-    region: "Brazil Â· Ethiopia",
-    country: "â€”",
+    producer: "House blend · seasonal",
+    region: "Brazil · Ethiopia",
+    country: "—",
     category: "blend",
     process: "Natural + washed",
     varietal: "Seasonal components",
@@ -140,13 +140,13 @@ export const PRODUCTS: Product[] = [
     roast: 4,
     notes: ["Dark chocolate", "Molasses", "Roasted almond"],
     description:
-      "Our after-dark espresso: 70% Brazilian natural for body, 30% washed Ethiopian for lift. Roasted a shade deeper to stay syrupy through milk â€” dark chocolate and molasses with an almond-butter finish.",
+      "Our after-dark espresso: 70% Brazilian natural for body, 30% washed Ethiopian for lift. Roasted a shade deeper to stay syrupy through milk — dark chocolate and molasses with an almond-butter finish.",
     price250: 17.5,
     score: 88,
     badge: "Best seller",
     accent: "#6f7f52",
     image: "/coffee/Night Owl Espresso.png",
-    recipe: { method: "Espresso", ratio: "1 : 2 in 30 s", grind: "Fine", temp: "92 Â°C", time: "0:30" },
+    recipe: { method: "Espresso", ratio: "1 : 2 in 30 s", grind: "Fine", temp: "92 °C", time: "0:30" },
   },
   {
     id: "sugarcane-decaf",
@@ -156,17 +156,17 @@ export const PRODUCTS: Product[] = [
     country: "Colombia",
     category: "decaf",
     process: "Sugarcane E.A.",
-    varietal: "Castillo Â· Caturra",
+    varietal: "Castillo · Caturra",
     altitude: "1,700 masl",
     roast: 3,
     notes: ["Toffee", "Orange zest", "Marzipan"],
     description:
-      "Decaffeinated the gentle way â€” with sugarcane-derived ethyl acetate from Colombia's own cane fields. You get the whole cup: toffee sweetness, a flick of orange zest, and a soft marzipan landing. 99.9% caffeine-free.",
+      "Decaffeinated the gentle way — with sugarcane-derived ethyl acetate from Colombia's own cane fields. You get the whole cup: toffee sweetness, a flick of orange zest, and a soft marzipan landing. 99.9% caffeine-free.",
     price250: 19,
     score: 87.9,
     accent: "#8fa07a",
     image: "/coffee/Sugarcane Decaf.png",
-    recipe: { method: "French press", ratio: "1 : 14", grind: "Coarse", temp: "96 Â°C", time: "4:00" },
+    recipe: { method: "French press", ratio: "1 : 14", grind: "Coarse", temp: "96 °C", time: "4:00" },
   },
 ];
 

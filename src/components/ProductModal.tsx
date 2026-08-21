@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { fmt, priceFor, ROAST_LABELS, weightLabel, type Product, type Weight } from "../data/products";
 import { useStore } from "../lib/store";
 import { BeanIcon, CheckIcon, CloseIcon, CupIcon, MinusIcon, PlusIcon, SparkIcon } from "./Icons";
@@ -29,7 +29,7 @@ export default function ProductModal({ product, onClose }: Props) {
 
   const handleAdd = () => {
     add(product.id, weight, qty);
-    toast(`Added ${product.name} Â· ${weightLabel(weight)} Ã— ${qty} to your bag`);
+    toast(`Added ${product.name} · ${weightLabel(weight)} × ${qty} to your bag`);
     setAdded(true);
     window.setTimeout(onClose, 850);
   };
@@ -70,13 +70,13 @@ export default function ProductModal({ product, onClose }: Props) {
           <div className="p-6 md:max-h-[85vh] md:overflow-y-auto md:p-9">
             <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-ember-300">
               {product.category === "single-origin" ? "Single origin" : product.category === "blend" ? "Blend" : "Decaf"}
-              {product.country !== "â€”" && <> Â· {product.country}</>}
+              {product.country !== "—" && <> · {product.country}</>}
             </p>
             <h3 className="mt-2 font-display text-3xl font-semibold tracking-tight text-cream-100 md:text-4xl">
               {product.name}
             </h3>
             <p className="mt-1 text-sm text-cream-500">
-              {product.producer}{product.region !== "â€”" && <> Â· {product.region}</>}
+              {product.producer}{product.region !== "—" && <> · {product.region}</>}
             </p>
 
             <p className="mt-5 text-[15px] leading-relaxed text-cream-300">{product.description}</p>
@@ -115,7 +115,7 @@ export default function ProductModal({ product, onClose }: Props) {
             {/* recipe */}
             <div className="mt-5 rounded-lg border border-leaf-700/60 bg-leaf-700/10 p-5">
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-leaf-300">
-                <CupIcon className="h-4 w-4" /> House recipe Â· {product.recipe.method}
+                <CupIcon className="h-4 w-4" /> House recipe · {product.recipe.method}
               </p>
               <div className="mt-3 grid grid-cols-4 gap-3">
                 {([
@@ -133,7 +133,7 @@ export default function ProductModal({ product, onClose }: Props) {
             </div>
 
             {/* buy controls */}
-            <div className="mt-7 flex items-center gap-3">
+            <div className="mt-7 flex flex-wrap items-center gap-3">
               <div className="flex rounded-full border border-roast-600 p-1">
                 {([250, 1000] as Weight[]).map((w) => (
                   <button
@@ -180,11 +180,11 @@ export default function ProductModal({ product, onClose }: Props) {
                   <CheckIcon className="h-5 w-5" /> Added to bag
                 </>
               ) : (
-                <>Add to bag Â· {fmt(total)}</>
+                <>Add to bag · {fmt(total)}</>
               )}
             </button>
             <p className="mt-3 text-center text-xs text-cream-500">
-              {fmt(unit)} per bag Â· roasted after you order Â· free shipping over $45
+              {fmt(unit)} per bag · roasted after you order · free shipping over $45
             </p>
           </div>
         </div>

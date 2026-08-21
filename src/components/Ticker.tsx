@@ -1,10 +1,10 @@
-﻿import { SparkIcon } from "./Icons";
+import { SparkIcon } from "./Icons";
 
 const ITEMS = [
-  "Roast days â€” Mon & Thu",
+  "Roast days — Mon & Thu",
   "Free U.S. shipping over $45",
   "Harvest 25/26 lots have landed",
-  "Roasted to order Â· shipped in 48 h",
+  "Roasted to order · shipped in 48 h",
   "Every batch cupped & scored",
   "Carbon-neutral delivery",
 ];

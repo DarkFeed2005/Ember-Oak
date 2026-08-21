@@ -1,4 +1,4 @@
-﻿import { HERO_IMAGE, nextRoastDate } from "../data/products";
+import { HERO_IMAGE, nextRoastDate } from "../data/products";
 import Reveal from "./Reveal";
 import { ArrowDownIcon, ArrowRightIcon, BeanIcon, Steam } from "./Icons";
 
@@ -13,7 +13,7 @@ function RoastStamp() {
           fill="currentColor"
           style={{ fontSize: 10.2, letterSpacing: 2.6, fontFamily: "Space Grotesk, sans-serif", fontWeight: 600 }}
         >
-          <textPath href="#circ">FRESH ROAST Â· SMALL BATCH Â· SINCE 2019 Â·</textPath>
+          <textPath href="#circ">FRESH ROAST &middot; SMALL BATCH &middot; SINCE 2019 &middot;</textPath>
         </text>
       </svg>
       <BeanIcon className="absolute left-1/2 top-1/2 h-7 w-7 -translate-x-1/2 -translate-y-1/2 text-ember-400" />
@@ -23,24 +23,38 @@ function RoastStamp() {
 
 export default function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pb-16 pt-28 md:pb-24 md:pt-40">
+    <section
+      id="top"
+      className="relative w-full max-w-full overflow-hidden px-4 pt-24 md:px-8 md:pt-40 pb-16 md:pb-24 sm:px-6 lg:px-8"
+    >
       {/* ambient glows */}
-      <div className="pointer-events-none absolute -left-32 top-10 h-[420px] w-[420px] animate-drift rounded-full bg-ember-600/14 blur-[110px]" />
-      <div className="pointer-events-none absolute -right-40 bottom-0 h-[460px] w-[460px] animate-drift rounded-full bg-leaf-700/20 blur-[120px]" style={{ animationDelay: "-6s" }} />
-      <BeanIcon className="pointer-events-none absolute -right-16 top-24 h-72 w-72 rotate-12 text-roast-800/60 md:h-96 md:w-96" />
+      <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 animate-drift rounded-full bg-ember-600/14 blur-[110px] md:-left-32 md:h-[420px] md:w-[420px]" />
+      <div
+        className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 animate-drift rounded-full bg-leaf-700/20 blur-[120px] md:-right-40 md:h-[460px] md:w-[460px]"
+        style={{ animationDelay: "-6s" }}
+      />
+      <BeanIcon className="pointer-events-none absolute -right-16 top-24 h-48 w-48 rotate-12 text-roast-800/60 md:h-96 md:w-96" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-8 lg:grid-cols-12 lg:gap-8">
+      <div className="relative mx-auto grid w-full max-w-full items-center gap-14 sm:max-w-7xl lg:grid-cols-12 lg:gap-8">
         {/* ---- copy ---- */}
-        <div className="lg:col-span-7">
+        <div className="w-full lg:col-span-7">
           <Reveal>
-            <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-ember-300">
-              <span className="h-2 w-2 animate-pulse-dot rounded-full bg-ember-400" />
-              Now roasting Â· Lot 042 â€” Guji Highlands
+            <p className="flex w-full items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-ember-300">
+              <span className="h-2 w-2 shrink-0 animate-pulse-dot rounded-full bg-ember-400" />
+              Now roasting &middot; Lot 042 &mdash; Guji Highlands
             </p>
           </Reveal>
 
           <Reveal delay={80}>
-            <h1 className="mt-6 font-display text-[13.5vw] font-medium leading-[0.98] tracking-tight text-cream-100 sm:text-6xl md:text-7xl xl:text-[86px]">
+            <h1
+              className="mt-6 break-words font-display font-medium tracking-tight text-cream-100"
+              style={{
+                fontSize: "clamp(2rem, 7.5vw, 4.5rem)",
+                lineHeight: "1.1",
+                wordBreak: "break-word",
+                overflowWrap: "anywhere",
+              }}
+            >
               <span className="mline"><span>Roasted by fire,</span></span>
               <span className="mline"><span style={{ transitionDelay: "140ms" }}>sourced with</span></span>
               <span className="mline">
@@ -52,7 +66,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={200}>
-            <p className="mt-7 max-w-xl text-base leading-relaxed text-cream-300 md:text-lg">
+            <p className="mt-7 w-full max-w-xl text-base leading-relaxed text-cream-300 md:text-lg">
               Ember &amp; Oak is a small-batch roastery working directly with fourteen farms
               across four continents. Every lot is cupped, scored, and on a truck within
               48 hours of leaving the drum.
@@ -60,32 +74,32 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={300}>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
+            <div className="mt-9 flex w-full flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
               <a
                 href="#counter"
-                className="group inline-flex items-center gap-3 rounded-full bg-ember-500 px-7 py-3.5 text-sm font-bold uppercase tracking-[0.14em] text-roast-950 transition-all hover:bg-ember-400 hover:shadow-[0_12px_40px_-10px_rgba(209,138,58,0.55)] active:scale-95"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-ember-500 px-7 py-3.5 text-sm font-bold uppercase tracking-[0.14em] text-roast-950 transition-all hover:bg-ember-400 hover:shadow-[0_12px_40px_-10px_rgba(209,138,58,0.55)] active:scale-95 sm:w-auto"
               >
                 Browse the counter
-                <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                <ArrowRightIcon className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
               <a
                 href="#craft"
-                className="group inline-flex items-center gap-3 rounded-full border border-roast-600 px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-cream-200 transition-all hover:border-ember-500/70 hover:text-ember-300"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-full border border-roast-600 px-7 py-3.5 text-sm font-semibold uppercase tracking-[0.14em] text-cream-200 transition-all hover:border-ember-500/70 hover:text-ember-300 sm:w-auto"
               >
                 Our craft
-                <ArrowDownIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
+                <ArrowDownIcon className="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-y-1" />
               </a>
             </div>
           </Reveal>
 
           <Reveal delay={380}>
-            <dl className="mt-12 grid max-w-xl grid-cols-3 gap-6 border-t border-roast-700 pt-7">
+            <dl className="mt-12 grid w-full grid-cols-1 gap-4 border-t border-roast-700 pt-7 sm:grid-cols-3 sm:gap-6">
               {[
                 ["14", "partner farms"],
                 ["92.1", "avg. cup score"],
                 ["48 h", "roast-to-door"],
               ].map(([n, l]) => (
-                <div key={l}>
+                <div key={l} className="w-full">
                   <dt className="sr-only">{l}</dt>
                   <dd className="font-display text-3xl font-semibold text-cream-100 md:text-4xl">{n}</dd>
                   <dd className="mt-1 text-xs uppercase tracking-[0.16em] text-cream-500">{l}</dd>
@@ -96,7 +110,7 @@ export default function Hero() {
         </div>
 
         {/* ---- arched image ---- */}
-        <div className="relative mx-auto w-full max-w-[400px] lg:col-span-5 lg:max-w-none">
+        <div className="relative mx-auto w-full max-w-full sm:max-w-[400px] lg:col-span-5 lg:max-w-none">
           <Reveal delay={150}>
             <div className="relative">
               <RoastStamp />
@@ -109,15 +123,15 @@ export default function Hero() {
                 />
               </div>
               <div className="absolute -bottom-4 left-3 flex -rotate-2 items-center gap-3 rounded-lg border border-ember-500/40 bg-roast-900/95 px-4 py-3 shadow-xl md:-left-6">
-                <span className="h-8 w-1 rounded-full bg-ember-500" />
+                <span className="h-8 w-1 shrink-0 rounded-full bg-ember-500" />
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cream-500">Next roast day</p>
-                  <p className="font-display text-lg font-semibold text-cream-100">{nextRoastDate()}</p>
+                  <p className="font-display text-lg font-semibold text-cream-100" suppressHydrationWarning>{nextRoastDate()}</p>
                 </div>
               </div>
               <div className="absolute -right-2 top-1/3 rotate-3 rounded-lg border border-roast-600 bg-roast-900/95 px-4 py-3 shadow-xl md:-right-6">
                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-cream-500">In the drum</p>
-                <p className="font-display text-lg font-semibold text-ember-300">Lot â„– 042</p>
+                <p className="font-display text-lg font-semibold text-ember-300">Lot &#8470; 042</p>
               </div>
             </div>
           </Reveal>
@@ -126,4 +140,3 @@ export default function Hero() {
     </section>
   );
 }
-

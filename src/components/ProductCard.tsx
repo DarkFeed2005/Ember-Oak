@@ -1,4 +1,4 @@
-﻿import { fmt, ROAST_LABELS, type Product } from "../data/products";
+import { fmt, ROAST_LABELS, type Product } from "../data/products";
 import { useStore } from "../lib/store";
 import { BeanIcon, PlusIcon } from "./Icons";
 
@@ -12,7 +12,7 @@ export default function ProductCard({ product, onOpen }: Props) {
 
   const quickAdd = () => {
     add(product.id, 250, 1);
-    toast(`Added ${product.name} Â· 250 g to your bag`);
+    toast(`Added ${product.name} · 250 g to your bag`);
   };
 
   return (
@@ -45,12 +45,12 @@ export default function ProductCard({ product, onOpen }: Props) {
 
       <div className="p-5">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-cream-500">
-          {product.country === "â€”" ? product.region : product.country} Â· {ROAST_LABELS[product.roast]}
+          {product.country === "—" ? product.region : product.country} · {ROAST_LABELS[product.roast]}
         </p>
         <h3 className="mt-1.5 font-display text-2xl font-semibold leading-snug text-cream-100 transition-colors group-hover:text-ember-300">
           {product.name}
         </h3>
-        <p className="mt-1.5 truncate text-sm text-cream-400">{product.notes.join(" Â· ")}</p>
+        <p className="mt-1.5 truncate text-sm text-cream-400">{product.notes.join(" · ")}</p>
 
         <div className="mt-4 flex items-end justify-between border-t border-roast-700 pt-4">
           <div>

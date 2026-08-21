@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { findProduct, fmt, priceFor, weightLabel } from "../data/products";
 import type { CartLine as Line } from "../lib/store";
 import { FREE_SHIPPING_AT, SHIPPING_FEE, useStore } from "../lib/store";
@@ -93,7 +93,7 @@ export default function Checkout({ onClose }: Props) {
     if (form.zip.trim().length < 3) e.zip = "Invalid";
     if (form.card.replace(/\s/g, "").length !== 16) e.card = "16 digits required";
     if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(form.exp)) e.exp = "MM/YY";
-    if (!/^\d{3,4}$/.test(form.cvc)) e.cvc = "3â€“4 digits";
+    if (!/^\d{3,4}$/.test(form.cvc)) e.cvc = "3–4 digits";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -140,7 +140,7 @@ export default function Checkout({ onClose }: Props) {
                     {i + 1 < stepIndex || step === "done" ? <CheckIcon className="h-3.5 w-3.5" /> : i + 1}
                   </span>
                   <span className={i + 1 === stepIndex ? "text-cream-100" : "text-cream-500"}>{s}</span>
-                  {i < 2 && <span className="mx-1 h-px w-5 bg-roast-600 md:w-8" />}
+                  {i < 2 && <span className="mx-1 hidden h-px w-5 bg-roast-600 sm:block md:w-8" />}
                 </li>
               ))}
             </ol>
@@ -158,7 +158,7 @@ export default function Checkout({ onClose }: Props) {
           {step === "processing" ? (
             <div className="flex flex-col items-center px-8 py-24 text-center">
               <BeanIcon className="h-12 w-12 animate-spin text-ember-400" />
-              <h3 className="mt-8 font-display text-3xl font-semibold text-cream-100">Talking to the roasteryâ€¦</h3>
+              <h3 className="mt-8 font-display text-3xl font-semibold text-cream-100">Talking to the roastery…</h3>
               <p className="mt-3 text-sm text-cream-400">Reserving your beans and confirming the roast slot.</p>
             </div>
           ) : (
@@ -169,7 +169,7 @@ export default function Checkout({ onClose }: Props) {
                   <>
                     <h3 className="font-display text-3xl font-semibold text-cream-100">Where should it land?</h3>
                     <p className="mt-2 text-sm text-cream-400">
-                      This is a simulated checkout â€” no real payment is taken.
+                      This is a simulated checkout — no real payment is taken.
                     </p>
                     <div className="mt-6 space-y-4">
                       <Field label="Email" value={form.email} onChange={set("email")} placeholder="you@somewhere.com" inputMode="email" error={errors.email} />
@@ -182,7 +182,7 @@ export default function Checkout({ onClose }: Props) {
 
                       <div className="rounded-lg border border-roast-700 bg-roast-850/60 p-4">
                         <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-ember-300">
-                          <CardIcon className="h-4 w-4" /> Payment Â· simulated
+                          <CardIcon className="h-4 w-4" /> Payment · simulated
                         </p>
                         <div className="mt-4 space-y-4">
                           <Field label="Card number" value={form.card} onChange={(v) => set("card")(formatCard(v))} placeholder="4242 4242 4242 4242" inputMode="numeric" error={errors.card} />
@@ -208,7 +208,7 @@ export default function Checkout({ onClose }: Props) {
                     </span>
                     <h3 className="mt-7 font-display text-4xl font-semibold text-cream-100">Order confirmed</h3>
                     <p className="mt-3 text-sm text-cream-400">
-                      Order <span className="font-bold text-ember-300">{orderId}</span> Â· confirmation sent to{" "}
+                      Order <span className="font-bold text-ember-300">{orderId}</span> · confirmation sent to{" "}
                       <span className="text-cream-200">{form.email || "your inbox"}</span>
                     </p>
                     <p className="mt-6 max-w-sm text-sm leading-relaxed text-cream-400">
@@ -236,7 +236,7 @@ export default function Checkout({ onClose }: Props) {
                         <img src={p.image} alt="" className="h-12 w-10 rounded-md object-cover" />
                         <div className="min-w-0 flex-1">
                           <p className="truncate text-sm font-semibold text-cream-100">{p.name}</p>
-                          <p className="text-xs text-cream-500">{weightLabel(l.weight)} Ã— {l.qty}</p>
+                          <p className="text-xs text-cream-500">{weightLabel(l.weight)} × {l.qty}</p>
                         </div>
                         <span className="text-sm font-semibold text-cream-200">
                           {fmt(priceFor(p, l.weight) * l.qty)}
@@ -245,7 +245,7 @@ export default function Checkout({ onClose }: Props) {
                     );
                   })}
                   {summaryLines.length === 0 && (
-                    <li className="text-sm text-cream-500">No items â€” the hopper is empty.</li>
+                    <li className="text-sm text-cream-500">No items — the hopper is empty.</li>
                   )}
                 </ul>
                 <div className="mt-6 space-y-1.5 border-t border-roast-700 pt-4 text-sm">

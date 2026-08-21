@@ -1,4 +1,4 @@
-﻿import type { SVGProps } from "react";
+import type { SVGProps } from "react";
 
 type P = SVGProps<SVGSVGElement>;
 
@@ -36,6 +36,12 @@ export const SearchIcon = (p: P) => (
 export const CloseIcon = (p: P) => (
   <svg {...base} {...p}>
     <path d="m6 6 12 12M18 6 6 18" />
+  </svg>
+);
+
+export const MenuIcon = (p: P) => (
+  <svg {...base} {...p}>
+    <path d="M4 7h16M4 12h16M4 17h16" />
   </svg>
 );
 
@@ -133,7 +139,7 @@ export const CardIcon = (p: P) => (
   </svg>
 );
 
-/** Three rising steam wisps â€” stagger via className/style on each path's parent. */
+/** Three rising steam wisps — stagger via className/style on each path's parent. */
 export const Steam = ({ className = "" }: { className?: string }) => (
   <svg
     viewBox="0 0 60 46"

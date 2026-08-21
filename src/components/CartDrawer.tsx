@@ -1,4 +1,4 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { findProduct, fmt, priceFor, weightLabel } from "../data/products";
 import { FREE_SHIPPING_AT, SHIPPING_FEE, useStore } from "../lib/store";
 import { ArrowRightIcon, BasketIcon, CheckIcon, CloseIcon, CupIcon, MinusIcon, PlusIcon, Steam, TrashIcon } from "./Icons";
@@ -94,7 +94,7 @@ export default function CartDrawer({ open, onClose, onCheckout }: Props) {
                           <div>
                             <p className="font-display text-lg font-semibold leading-tight text-cream-100">{p.name}</p>
                             <p className="mt-0.5 text-xs text-cream-500">
-                              {weightLabel(l.weight)} Â· {fmt(unit)} each
+                              {weightLabel(l.weight)} · {fmt(unit)} each
                             </p>
                           </div>
                           <button

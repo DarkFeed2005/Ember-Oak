@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { CATEGORIES, PRODUCTS, type Category, type Product } from "../data/products";
 import Reveal from "./Reveal";
 import ProductCard from "./ProductCard";
@@ -14,9 +14,9 @@ interface Props {
 
 const SORTS: { id: SortId; label: string }[] = [
   { id: "featured", label: "Featured" },
-  { id: "price-asc", label: "Price Â· low to high" },
-  { id: "price-desc", label: "Price Â· high to low" },
-  { id: "roast", label: "Roast Â· light to dark" },
+  { id: "price-asc", label: "Price · low to high" },
+  { id: "price-desc", label: "Price · high to low" },
+  { id: "roast", label: "Roast · light to dark" },
 ];
 
 export default function Shop({ category, onCategory, onOpen }: Props) {
@@ -53,15 +53,15 @@ export default function Shop({ category, onCategory, onOpen }: Props) {
   };
 
   return (
-    <section id="counter" className="relative scroll-mt-24 py-20 md:py-28">
+<section id="counter" className="relative scroll-mt-24 overflow-x-clip py-20 md:py-28">
       <div className="pointer-events-none absolute left-1/2 top-0 h-[380px] w-[720px] -translate-x-1/2 rounded-full bg-ember-600/8 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-7xl px-5 md:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* heading */}
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <Reveal>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-ember-300">
-              Shop Â· six coffees on the menu
+              Shop · six coffees on the menu
             </p>
             <h2 className="mt-4 font-display text-5xl font-medium tracking-tight text-cream-100 md:text-6xl">
               The Counter<span className="text-ember-400">.</span>
@@ -74,7 +74,7 @@ export default function Shop({ category, onCategory, onOpen }: Props) {
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search origin, notes, processâ€¦"
+                placeholder="Search origin, notes, process…"
                 className="w-full bg-transparent text-sm text-cream-100 placeholder:text-cream-500 focus:outline-none"
                 aria-label="Search coffees"
               />
@@ -136,7 +136,7 @@ export default function Shop({ category, onCategory, onOpen }: Props) {
           Showing <span className="font-semibold text-cream-200">{results.length}</span> of {PRODUCTS.length} coffees
           {query && (
             <>
-              {" "}for â€œ<span className="text-ember-300">{query}</span>â€
+              {" "}for “<span className="text-ember-300">{query}</span>”
             </>
           )}
         </p>
@@ -155,7 +155,7 @@ export default function Shop({ category, onCategory, onOpen }: Props) {
             <BeanIcon className="h-14 w-14 rotate-12 text-roast-600" />
             <h3 className="mt-6 font-display text-3xl font-semibold text-cream-100">Nothing in the hopper.</h3>
             <p className="mt-3 max-w-sm text-sm text-cream-400">
-              No coffees match that grind. Try a different note â€” â€œpeachâ€, â€œchocolateâ€ â€” or clear your filters.
+              No coffees match that grind. Try a different note — “peach”, “chocolate” — or clear your filters.
             </p>
             <button
               onClick={clearAll}

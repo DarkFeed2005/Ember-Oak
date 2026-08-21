@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 
@@ -27,16 +27,18 @@ export default function Preloader() {
       role="status"
       aria-label="Loading"
     >
-      <div className="pl-loader">
-        <div className="pl-cup">
-          <div className="pl-handle" />
-          <div className="pl-smoke one" />
-          <div className="pl-smoke two" />
-          <div className="pl-smoke three" />
+      <div className="pl-stack">
+        <div className="pl-loader">
+          <div className="pl-cup">
+            <div className="pl-handle" />
+            <div className="pl-smoke one" />
+            <div className="pl-smoke two" />
+            <div className="pl-smoke three" />
+          </div>
         </div>
-        <p className="pl-text">Brewing…</p>
+        <p className="pl-text">Brewing&hellip;</p>
+        <p className="pl-credit">Made by KpolitX Team</p>
       </div>
-      <p className="pl-credit">Made by KpolitX Team</p>
     </div>
   );
 }

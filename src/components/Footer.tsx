@@ -96,7 +96,7 @@ export default function Footer({ onCategory }: Props) {
           <p className="mt-6 flex items-start gap-3 text-sm text-cream-300">
             <PinIcon className="mt-0.5 h-4.5 w-4.5 shrink-0 text-ember-400" />
             <span>
-              410 NW Flanders St, Portland, OR
+              410 NW Flanders St, Colombo, SL
               <br />
               <span className="text-cream-500">CafÃ© open Tueâ€“Sun Â· 7 am â€“ 4 pm</span>
             </span>
@@ -148,9 +148,9 @@ export default function Footer({ onCategory }: Props) {
 
       <div className="border-t border-roast-700">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-5 py-6 text-xs text-cream-500 md:flex-row md:px-8">
-          <p>Â© 2026 Ember &amp; Oak Roasters. Roasted with fire in Portland, OR.</p>
+          <p>Â© 2026 Ember &amp; Oak Roasters. Roasted with fire in Sri Lanka.</p>
           <p className="flex items-center gap-2">
-            Est. 2019 <BeanIcon className="h-3.5 w-3.5 text-ember-500" /> Demo storefront â€” checkout is simulated
+             <BeanIcon className="h-3.5 w-3.5 text-ember-500" /> Made By KpolitX Team
           </p>
         </div>
       </div>
